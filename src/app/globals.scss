@@ -1,12 +1,12 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --is-dark: 0;
+  --background: #{if(var(--is-dark) == 1, #0a0a0a, #ffffff)};
+  --foreground: #{if(var(--is-dark) == 1, #ededed, #171717)};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --is-dark: 1;
   }
 }
 
