@@ -157,3 +157,64 @@ a {
     filter: invert(1);
   }
 }
+
+.editor {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+.menuBar {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  button {
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+
+  select {
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+  }
+
+  .isActive {
+    background: #e6f3ff;
+    border-color: #0066cc;
+    color: #0066cc;
+  }
+}
+
+:global(.ProseMirror) {
+  padding: 20px;
+  min-height: 200px;
+  outline: none;
+
+  > * + * {
+    margin-top: 0.75em;
+  }
+
+  ul,
+  ol {
+    padding: 0 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
