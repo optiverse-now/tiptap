@@ -137,6 +137,7 @@ const Tiptap = () => {
       Image,
       Underline,
     ],
+    immediatelyRender: false,
   })
 
   return (
